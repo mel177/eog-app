@@ -23,10 +23,10 @@ const login = (props) => {
         <Col md={2} />
         <Col md={8}>
             <form>
-                <FieldGroup id="formControlsEmail" type="text" label="Email" inputRef={(ref) => { this.email = ref }} />
+                <FieldGroup id="formControlsUsername" type="text" label="Username" inputRef={(ref) => { this.username = ref }} />
                 <FieldGroup id="formControlsPassword" type="password" label="Password" inputRef={(ref) => { this.password = ref }} />
                 <Button type="button" bsStyle="success" onClick={() => {
-                    props.login(this.email.value, this.password.value)
+                    props.login(this.username.value, this.password.value)
                 }}>
                     Login
                 </Button>

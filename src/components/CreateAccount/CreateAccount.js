@@ -24,14 +24,14 @@ const createAccount = (props) => {
         <Col md={2} />
         <Col md={8}>
             <form>
-                <FieldGroup id="formControlsFirstName" type="text" label="First Name" inputRef={(ref) => { this.first_name = ref }} />
-                <FieldGroup id="formControlsLastName" type="text" label="Last Name" inputRef={(ref) => { this.last_name = ref }} />
+                {/* <FieldGroup id="formControlsFirstName" type="text" label="First Name" inputRef={(ref) => { this.first_name = ref }} /> */}
+                <FieldGroup id="formControlsLastName" type="text" label="UserName" inputRef={(ref) => { this.username = ref }} />
                 <FieldGroup id="formControlsEmail" type="text" label="Email" inputRef={(ref) => { this.email = ref }} />
                 <FieldGroup id="formControlsPassword" type="password" label="Password" inputRef={(ref) => { this.password = ref }} />
                 <FieldGroup id="formControlsPassword" type="password" label="Confirm Password" inputRef={(ref) => { this.confirm_password = ref }} />
 
                 <Button type="button" bsStyle="success" onClick={() => {
-                    props.create(this.first_name.value, this.last_name.value, this.email.value, this.password.value, this.confirm_password.value)
+                    props.create(this.username.value, this.email.value, this.password.value, this.confirm_password.value)
                 }}>
                     Create Account
                     </Button>
